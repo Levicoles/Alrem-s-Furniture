@@ -24,9 +24,33 @@ function onClick () {
 
       <v-main>
         <v-container>
-          <h1>Main Content</h1>
+          <v-row>
+            <v-col cols="12" md="6" class="mx-auto">
+              <v-card
+                class="mx-auto"
+                prepend-icon="mdi-account"
+                subtitle="Login"
+              >
+                <template v-slot:title>
+                  <span class="font-weight-black">Alrem's Furniture</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  <v-form fast-fail @submit.prevent>
+                    <v-text-field label="Email" variant="outlined"></v-text-field>
+
+                    <v-text-field label="Password" type="password" variant="outlined"> </v-text-field>
+
+                    <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                  </v-form>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-container>
       </v-main>
+
+      <v-footer border app color="brown-darken-1" class="justify-center">2025 - Alrem's Furniture</v-footer>
     </v-app>
   </v-responsive>
 </template>
