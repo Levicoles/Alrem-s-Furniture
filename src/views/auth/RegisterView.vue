@@ -28,7 +28,7 @@ function onClick () {
             <v-col cols="12" md="6" class="mx-auto">
               <v-card
                 class="mx-auto"
-                prepend-icon="mdi-login"
+                prepend-icon="mdi-account-plus"
                 subtitle="Login"
                 elevation="24"
               >
@@ -38,26 +38,39 @@ function onClick () {
 
                 <v-card-text class="bg-surface-light pt-4">
                   <v-form fast-fail @submit.prevent>
-                    <v-text-field 
-                      label="Email" 
-                      variant="outlined" 
-                      prepend-inner-icon="mdi-email-outline">
-                    </v-text-field>
+                    <v-row>
+                        <v-col md="6">
+                            <v-text-field label="Firstname" variant="outlined"  prepend-inner-icon="mdi-account-outline">
+                                
+                            </v-text-field>
+                        </v-col>
+                        <v-col md="6">
+                            <v-text-field label="Lastname" variant="outlined" prepend-inner-icon="mdi-account-outline"></v-text-field>
+                        </v-col>
+                    </v-row>
 
+                    <v-text-field label="Email" variant="outlined" prepend-inner-icon="mdi-email-outline"></v-text-field>
+                    
                     <v-text-field 
-                      label="Password" 
-                      type="password" 
-                      variant="outlined" 
-                      prepend-inner-icon="mdi-lock-outline"> 
-                      </v-text-field>
+                        label="Password" 
+                        type="password" 
+                        variant="outlined" 
+                        prepend-inner-icon="mdi-lock-outline"> 
+                    </v-text-field>
+                    
+                    <v-text-field 
+                        label="Confirm Password" 
+                        type="password" 
+                        variant="outlined"
+                        prepend-inner-icon="mdi-lock-check-outline">
+                    </v-text-field>
 
                     <v-btn class="mt-2" type="submit" block>Submit</v-btn>
                   </v-form>
 
                   <v-divider class="my-5"></v-divider>
 
-                  <h5 class="text-center">Don't have account? <RouterLink to="register" class="text-primary">Click here to Register</RouterLink> </h5>
-
+                  <h5 class="text-center">Already have account? <RouterLink to="/" class="text-primary">Click here to Login</RouterLink></h5>
                 </v-card-text>
               </v-card>
             </v-col>
